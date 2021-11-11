@@ -6,11 +6,16 @@ using namespace ec602;
 
 int main(int argc,char** argv) {
     int input = 1;
-    int sum = 0;
+    long int sum = 0;
     cin >> input;
 
     while(input != 0)
-    {
+    {   
+        if (input == 1 || input < 0)
+        {
+            cout<< "Error: Value not allowed. \n";
+            break;
+        }
         cout << input << ": 1";
         sum = 1;
         for(int i = 2; i < input; i++)
